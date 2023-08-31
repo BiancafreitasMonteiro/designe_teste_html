@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <p id="mensagem"></p>
+
+
+    <h3> Matérias do semestre (for):</h3>
+
+    <p id="disciplinas"></p>
+
+
+    <h3> Matérias do semestre (while):</h3>
+
+    <p id="disciplinas2"></p>
+
+
+    <h3> 5 características de um carro: </h3>
+
+    <p id="carros"></p>
+
+
+    <h3> Tabuada do 8 :)</h3>
+
+
+    <script>
+
+        var genero = prompt("Digite M para masculino ou F para feminino: ");
+
+
+        switch (genero) {
+
+            case "M":
+
+                saudacao = "Seja bem-vindo!";
+
+                break;
+
+            case "F":
+
+                saudacao = "Seja bem-vinda!";
+
+                break;
+
+            default:
+
+                saudacao = "Seje bem-vinde!";
+
+                break;
+
+        }
+
+        document.getElementById("mensagem").innerHTML = saudacao;
+
+
+
+
+        var disciplinas = ["Fundamentos de programação", " Arquitetura de computadores", " Linguagem e interação", " Legislação aplicada", " e Economia."];
+
+        var text = "";
+
+        var i;
+
+        for (i = 0; i < disciplinas.length; i++) {
+
+        text += disciplinas[i] + "<br>";
+
+        }
+
+        document.getElementById("disciplinas").innerHTML = disciplinas;
+
+
+
+
+        var disciplinas2 = ["Fundamentos de programação", " Arquitetura de computadores", " Linguagem e interação", " Legislação aplicada", " e Economia."];
+
+        var text = "";
+
+        var i = 0;
+
+        while (i < disciplinas2.length) {
+
+            text += i;
+
+            i++;
+
+        }
+
+        document.getElementById("disciplinas2").innerHTML = disciplinas2;
+
+
+        var numero = 8;
+
+
+        for (var i = 1; i <= 10; i++) {
+
+        var resultado = numero * i;
+
+            document.write(numero + ' x ' + i + ' = ' + resultado + '<br>');
+
+
+        }
+
+
+        var txt = "";
+
+        var carro = {marca:"BMW,", modelo:"320i,",ano:2015, cor:", Preta,", uso:"2° dono"};
+
+        var atributo;
+
+        for (atributo in carro) {
+
+            txt += carro[atributo] + " ";
+
+        }
+
+        document.getElementById("carros").innerHTML = txt;
+
+
+    </script>
+
+
+</body>
+
+</html>
